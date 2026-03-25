@@ -2,7 +2,7 @@
 
 **Level up your coding breaks!** Play the original, legendary Super Mario Bros (NES) directly inside your VS Code window. No emulators needed, no complex setup. Just install and press Start.
 
-![Super Mario Demonstration](media/Extensiondemo.gif)
+![Super Mario Demonstration](media/extension_demo_compressed.gif)
 
 ---
 
