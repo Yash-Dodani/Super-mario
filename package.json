@@ -1,5 +1,5 @@
 {
-  "name": "super-mario-og",
+  "name": "super-mario",
   "displayName": "Super Mario",
   "repository": {
     "type": "git",
@@ -25,14 +25,14 @@
   "contributes": {
     "commands": [
       {
-        "command": "super-mario-og.play",
+        "command": "super-mario.play",
         "title": "Play Super Mario"
       }
     ],
     "menus": {
       "view/title": [
         {
-          "command": "super-mario-og.play",
+          "command": "super-mario.play",
           "group": "navigation"
         }
       ]

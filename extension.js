@@ -7,12 +7,12 @@ const https = require('https');
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
-	vscode.window.showInformationMessage('Super Mario OG Extension is now Active!');
+	vscode.window.showInformationMessage('Super Mario Extension is now Active!');
 
-	let disposable = vscode.commands.registerCommand('super-mario-og.play', function () {
+	let disposable = vscode.commands.registerCommand('super-mario.play', function () {
 		const panel = vscode.window.createWebviewPanel(
-			'marioOG',
-			'Super Mario OG',
+			'mario',
+			'Super Mario',
 			vscode.ViewColumn.One,
 			{
 				enableScripts: true,
@@ -53,7 +53,7 @@ function getWebviewContent(context, webview) {
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Super Mario OG</title>
+	<title>Super Mario</title>
 	<link rel="stylesheet" href="${cssPath}">
 </head>
 <body>
