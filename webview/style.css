@@ -1,0 +1,118 @@
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+canvas {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: 100%; /* Default scale to height */
+    aspect-ratio: 256 / 240;
+    outline: none;
+}
+
+#rom-input-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    pointer-events: none;
+}
+
+#controls-hint {
+    margin-top: 20px;
+    font-size: 0.5rem;
+    color: #888;
+    line-height: 1.5;
+}
+
+kbd {
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 3px;
+    padding: 2px 5px;
+    color: #fff;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+#rom-input-section {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px dashed #555;
+    border-radius: 10px;
+    background: rgba(255,255,0,0.05);
+}
+
+#rom-input-section p {
+    font-size: 0.5rem;
+    margin-bottom: 10px;
+}
+
+#loading-indicator {
+    padding: 20px;
+    font-size: 0.8rem;
+    color: #ff0;
+    text-shadow: 1px 1px #880;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+input[type="file"] {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.4rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Glassmorphism subtle overlay */
+#game-container::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
+    border-radius: 15px;
+}
+
+#controls {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+#controls button {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border: 1px solid #ff4d4d;
+    padding: 8px 16px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+#controls button:hover {
+    background: #ff4d4d;
+    color: #000;
+}
